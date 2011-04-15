@@ -1,0 +1,24 @@
+= Labeler: Label Print Server for Touchscreen Workstations
+
+Allows printing of labels from a full-screen mode browser without prompting. It
+supports label files with .lbl and .lbs extensions.
+
+== Usage
+
+Server:
+  $ netcat_server.sh PORT DEVICE
+
+Client:
+  $ print.rb LABEL_FILE
+  
+=== Examples
+
+To run in background mode on port 4242 using a USB connection:
+  $ nohup /usr/local/sbin/netcat_server.sh 4242 usblp0 &
+
+To run in background mode on port 4243 using a Parallel connection:
+  $ nohup /usr/local/sbin/netcat_server.sh 4243 lp0 &
+
+To print a label
+  $ print.rb labelfile.lbl
+

@@ -1,0 +1,29 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# load touch sensor drivers (for J2 615 models)
+/etc/opt/elo/loadelo
+/etc/opt/elo/eloser ttyS4
+
+# start print-server
+
+# Passport (Normal) labels
+nohup /usr/local/sbin/netcat_server.sh 4242 usblp0 &
+
+# Specimen labels
+nohup /usr/local/sbin/netcat_server.sh 4243 lp0 &
+
+# fix for touch sensor (for J2 615 models)
+/etc/init.d/gdm restart
+
+exit 0
