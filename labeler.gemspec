@@ -13,7 +13,8 @@ Gem::Specification.new do |s|
                    'bin/netcat_server.sh']
   s.has_rdoc    = false
 
-  s.files       = ['bin/print', 'bin/print_via_cgi.rb', 'bin/netcat_server.sh', 
+  s.files       = ['bin/print', 'bin/print.rb', 'bin/print_via_cgi.rb', 
+                   'bin/netcat_server.sh', 
                    'resources/mimeTypes.rdf', 'resources/rc.local',
                    'README', 'CHANGELOG'
                    ]

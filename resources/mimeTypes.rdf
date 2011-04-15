@@ -23,7 +23,7 @@
     <NC:handlerProp RDF:resource="urn:scheme:handler:mailto"/>
   </RDF:Description>
   <RDF:Description RDF:about="urn:mimetype:externalApplication:application/label"
-                   NC:path="/home/user/print_via_cgi.rb"
+                   NC:path="/home/user/print.rb"
                    NC:prettyName="Baobab Labeler" />
   <RDF:Description RDF:about="urn:handler:web:http://compose.mail.yahoo.com/?To=%s"
                    NC:prettyName="Yahoo! Mail"
