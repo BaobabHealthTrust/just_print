@@ -1,4 +1,5 @@
-= Labeler: Label Print Server for Touchscreen Workstations
+= Just Print
+Just Print without prompting on Touchscreen Workstations
 
 Allows printing of labels from a full-screen mode browser without prompting. It
 supports label files with .lbl and .lbs extensions.
@@ -20,5 +21,5 @@ To run in background mode on port 4243 using a Parallel connection:
   $ nohup /usr/local/sbin/netcat_server.sh 4243 lp0 &
 
 To print a label
-  $ print.rb labelfile.lbl
+  $ ./print.rb labelfile.lbl
 
