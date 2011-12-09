@@ -4,6 +4,10 @@ Just Print without prompting on Touchscreen Workstations
 Allows printing of labels from a full-screen mode browser without prompting. It
 supports label files with .lbl and .lbs extensions.
 
+== Install
+Install the gem with --no-wrappers to work with no-ruby executables
+  $ sudo gem install --no-wrappers just_print-1.0.gem
+
 == Usage
 
 Server:
