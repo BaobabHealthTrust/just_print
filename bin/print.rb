@@ -19,17 +19,24 @@ else
   type = "lbl"
 end 
 log.puts "Label Type: #{type}"
-
+label = true
 # Get the port from the label's extension
 if type == 'lbs'
   port = '4243'
+elsif type == 'pdf'
+  label = false
 else
   port = '4242'
 end
 
+# Send label to printer
+print_cmd = ''
+if label
+ print_cmd = "cat #{file_path} | netcat -q 1 #{printer_host} #{port}"
+else
+  print_cmd = "lp #{file_path}"
+end
 
-# Send label to printer  
-print_cmd = "cat #{file_path} | netcat -q 1 #{printer_host} #{port}"
 log.puts print_cmd
 `#{print_cmd}`
 
