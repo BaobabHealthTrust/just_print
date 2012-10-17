@@ -1,13 +1,13 @@
 
 Gem::Specification.new do |s|
   s.name        = 'just_print'
-  s.version     = '1.0'
+  s.version     = '1.1'
   s.summary     = 'Just Print without prompting on touchscreen workstations' 
   s.description = 'Allows printing of labels from a full-screen mode browser without prompting'
   
   s.authors     = 'Baobab Health Trust'
   s.email       = %q{developers@baobabhealth.org}
-  s.date        = %q{2011-04-15}
+  s.date        = %q{2012-10-17}
   
   s.executables = ['print', 'print.rb', 'print_via_cgi.rb', 
                    'netcat_server.sh']
