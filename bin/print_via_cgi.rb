@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 # The print_string is the actual command to be sent to the printer
 # Because the iopener web server can only accept GETs of limited size
 # We have to send multiple GETs and tell the iopener when we are done
