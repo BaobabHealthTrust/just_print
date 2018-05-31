@@ -34,7 +34,7 @@ sent_string = ""
 commands = ""
 
 # Label type is file extension - last 3 characters of label file
-if file.path.match(/(...)$/)
+if file.path.match(/\.(...)$/)
   type = $1
 else
   type = "lbl"

@@ -13,17 +13,17 @@ log = File.open(log_file, "a")
 log.puts("Started with #{ARGV.join('|')}")
 
 # Label type is file extension - last 3 characters of label file
-if file_path.match(/(...)$/)
+if file_path.match(/(\....)$/)
   type = $1
 else
-  type = "lbl"
+  type = ".lbl"
 end 
 log.puts "Label Type: #{type}"
 label = true
 # Get the port from the label's extension
-if type == 'lbs'
+if type == '.lbs'
   port = '4243'
-elsif type == 'pdf'
+elsif type == '.pdf'
   label = false
 else
   port = '4242'
