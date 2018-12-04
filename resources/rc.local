@@ -18,7 +18,7 @@
 # start print-server
 
 # Passport (Normal) labels
-nohup /usr/local/sbin/netcat_server.sh 4242 usblp0 &
+nohup /usr/local/sbin/netcat_server.sh 4242 /dev/usb/lp0 &
 
 # Specimen labels
 nohup /usr/local/sbin/netcat_server.sh 4243 lp0 &
