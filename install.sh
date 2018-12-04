@@ -15,20 +15,20 @@
 
 # get just print directory before excuting anything else
 
-JUST_PRINT_DIRECTORY=$(pwd)
+JUST_PRINT_DIR=$(pwd)
 
 cd /home/$USER/.mozilla/firefox/
 
 if [[ $(grep '\[Profile[^0]\]' profiles.ini) ]]
-then PROFPATH=$(grep -E '^\[Profile|^Path|^Default' profiles.ini | grep -1 '^Default=1' | grep '^Path' | cut -c6-)
-else PROFPATH=$(grep 'Path=' profiles.ini | sed 's/^Path=//')
+then FIREFOX_PROF_PATH=$(grep -E '^\[Profile|^Path|^Default' profiles.ini | grep -1 '^Default=1' | grep '^Path' | cut -c6-)
+else FIREFOX_PROF_PATH=$(grep 'Path=' profiles.ini | sed 's/^Path=//')
 fi
 
-echo $PROFPATH
+echo $FIREFOX_PROF_PATH
 
-cd $JUST_PRINT_DIRECTORY
+cd $JUST_PRINT_DIR
 
-sudo cp resources/mimeTypes.rdf /home/$USER/.mozilla/firefox/$PROFPATH/
+sudo cp resources/mimeTypes.rdf /home/$USER/.mozilla/firefox/$FIREFOX_PROF_PATH/
 
 # print-server
 sudo cp bin/netcat_server.sh /usr/local/sbin/
