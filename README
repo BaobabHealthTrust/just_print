@@ -19,7 +19,7 @@ Client:
 === Examples
 
 To run in background mode on port 4242 using a USB connection:
-  $ nohup /usr/local/sbin/netcat_server.sh 4242 /dev/usb/lp0 &
+  $ nohup /usr/local/sbin/netcat_server.sh 4242 usblp0 &
 
 To run in background mode on port 4243 using a Parallel connection:
   $ nohup /usr/local/sbin/netcat_server.sh 4243 lp0 &
