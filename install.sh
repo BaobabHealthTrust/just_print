@@ -34,6 +34,7 @@ sudo cp resources/mimeTypes.rdf /home/$USER/.mozilla/firefox/$FIREFOX_PROF_PATH/
 sudo cp bin/netcat_server.sh /usr/local/sbin/
 
 # print-proxy
+sudo mkdir /usr/lib/cgi-bin
 sudo cp bin/print /usr/lib/cgi-bin/
 
 # print-client
@@ -42,4 +43,5 @@ sudo cp bin/print_via_cgi.rb /home/$USER/
 
 # startup script
 sudo cp resources/rc.local /etc/
+sudo mkdir /usr/cgi-bin
 
