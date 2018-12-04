@@ -27,3 +27,12 @@ To run in background mode on port 4243 using a Parallel connection:
 To print a label
   $ ./print.rb labelfile.lbl
 
+# AUTOMATED INSTALLATION
+
+# Make sure you are in the root directory for just_print
+# Simply run the following command as a regular user. The same user that is going to be used when running the application (Mozilla Firefox)
+# NOTE
+#-------
+# Do not run this automated install as root
+
+./install.sh

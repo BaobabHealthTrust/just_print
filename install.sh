@@ -14,9 +14,10 @@
 # auto-read system username and default mozilla firefox profile
 
 # get just print directory before excuting anything else
+
 JUST_PRINT_DIRECTORY=$(pwd)
 
-cd ~/.mozilla/firefox/
+cd /home/$USER/.mozilla/firefox/
 
 if [[ $(grep '\[Profile[^0]\]' profiles.ini) ]]
 then PROFPATH=$(grep -E '^\[Profile|^Path|^Default' profiles.ini | grep -1 '^Default=1' | grep '^Path' | cut -c6-)
